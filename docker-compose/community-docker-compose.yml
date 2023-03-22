@@ -12,6 +12,11 @@ services:
   alfresco:
     image: alfresco/alfresco-content-repository-community:7.3.0-M2
     mem_limit: 1900m
+    
+    depends_on:
+        - alfresco-identity-service
+        - postgres
+    
     environment:
       JAVA_TOOL_OPTIONS: "
         -Dencryption.keystore.type=JCEKS
