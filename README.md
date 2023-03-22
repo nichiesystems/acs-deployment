@@ -1,4 +1,4 @@
-# Alfresco Content Services Containerized Deployment
+# Amikurz Content Services Containerized Deployment
 
 [![verify](https://github.com/Alfresco/acs-deployment/actions/workflows/verify.yml/badge.svg)](https://github.com/Alfresco/acs-deployment/actions/workflows/verify.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
