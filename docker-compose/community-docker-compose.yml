@@ -116,6 +116,18 @@ services:
     mem_limit: 128m
     environment:
       APP_BASE_SHARE_URL: "http://localhost:8080/aca/#/preview/s"
+      
+  alfresco-identity-service:
+        image: alfresco/alfresco-identity-service:${AIMS_TAG}
+        environment:
+          - KEYCLOAK_USER=admin
+          - KEYCLOAK_PASSWORD=admin
+          - KEYCLOAK_IMPORT=/tmp/alfresco-realm.json
+          - DB_VENDOR=h2
+        volumes:
+          - ./config/alfresco-realm.json:/tmp/alfresco-realm.json
+        ports:
+          - 8999:8080
 
   proxy:
     image: alfresco/alfresco-acs-nginx:3.4.2
